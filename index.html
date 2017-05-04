@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<title>svg</title>
+	<meta name="keywords" content="关键字">
+	<meta name="description" content="描述">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<style>
+		html,body,svg{
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+</head>
+<body>
+	<svg>
+		
+		<path d="M10 100 C 40 200, 130 200, 160 100 S 280 0, 310 100 S 430 200, 460 100" stroke="#2980b9" stroke-width="10px" ></path>
+		<path d="M10 100 C 40 200, 130 200, 160 100 S 280 0, 310 100 S 430 200, 460 100" stroke="black" stroke-width="1px" ></path>
+	</svg>
+	<script type="text/javascript" src="svg.js"></script>
+	<script type="text/javascript">
+		window.onload = function(){
+			var paths = document.querySelectorAll("path");
+			var svg = new SVG(paths);
+			svg.draw({
+				duration:3000,
+				stroke:"black",
+				strokeWidth:"2px"
+			});
+		}
+	</script>
+</body>
+</html>
